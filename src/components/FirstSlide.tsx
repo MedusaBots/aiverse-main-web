@@ -3,7 +3,8 @@ import style from "../css/firstslide.module.css";
 import menu from "../images/menu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
-function Firstslide() {
+
+function FirstSlide() {
   return (
     <div className={`w-[100vw] h-[100vh] ${style.background} relative`}>
       <div className="absolute top-[22vh] lg:top-[18vh] text-center text-white m-auto w-[100vw] font-headingbold font-bold lg:text-[12vh] lg:leading-[12vh] leading-[5vh] text-[5vh]">
@@ -61,4 +62,4 @@ function Firstslide() {
   );
 }
 
-export default Firstslide;
+export default FirstSlide;
