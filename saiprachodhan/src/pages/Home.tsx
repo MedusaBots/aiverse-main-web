@@ -1,7 +1,12 @@
 import React from "react";
+import Firstslide from "../components/Firstslide";
 
 function Home() {
-  return <div className="text-2xl text-red-700">Home</div>;
+  return (
+    <div>
+      <Firstslide />
+    </div>
+  );
 }
 
 export default Home;
