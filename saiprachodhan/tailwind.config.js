@@ -10,6 +10,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         text: ["Manrope", "sans-serif"],
         inter: ["Inter"],
+        mont: ["Montserrat"],
       },
     },
   },
