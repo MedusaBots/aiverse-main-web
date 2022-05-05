@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../css/thirdslide.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Fourthslide from "./Fourthslide";
+
 function Thirdslide() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className={`${styles.background}`}>
       <div className="nw:ml-[8vw]">
@@ -10,9 +18,11 @@ function Thirdslide() {
         <br />
         <br />
         <br />
-        <div className="cards nw:mr-[8vw] flex justify-between">
+        <div className="cards nw:mr-[8vw] md:flex-row flex-col flex justify-between">
           <div
             className="card mt-[20px] mr-[20px] min-h-[350px] mx-4 w-[240px] relative rounded-lg"
+            data-aos="fade-up"
+            data-aos-duration="1500"
             style={{
               background: "#122C48",
               border: "2px solid rgba(255, 255, 255, 0.05)",
@@ -52,6 +62,8 @@ function Thirdslide() {
               background: "#122C48",
               boxShadow: "-23.609px 48.8461px 73.2692px rgba(23, 18, 43, 0.55)",
             }}
+            data-aos="fade-up"
+            data-aos-duration="1500"
           >
             <div
               className="transition-all duration-1000 ease-in-out absolute hover:top-[20px] hover:left-[20px] min-h-[350px] w-[240px] z-[10] rounded-lg"
@@ -83,6 +95,8 @@ function Thirdslide() {
               background: "#122C48",
               boxShadow: "-23.609px 48.8461px 73.2692px rgba(23, 18, 43, 0.55)",
             }}
+            data-aos="fade-up"
+            data-aos-duration="1500"
           >
             <div
               className="transition-all duration-1000 ease-in-out absolute hover:top-[-20px] hover:left-[20px] min-h-[350px] w-[240px] z-[10] rounded-lg"
@@ -112,6 +126,7 @@ function Thirdslide() {
         <br />
         <br />
         <br />
+        <Fourthslide />
       </div>
     </div>
   );

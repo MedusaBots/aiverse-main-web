@@ -9,6 +9,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Dots from "../images/Dots.png";
 import Boxes from "../images/Img.png";
 import Thirdslide from "./Thirdslide";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 function Secondslide() {
   // Add achievements here then set slide index so that you can show achievemnts as cards
@@ -39,7 +40,16 @@ function Secondslide() {
     },
   ];
   // Set sliceIndex to have a carousel of achievements
-  const [sliceIndex, setsliceIndex] = useState<Array<number>>([0, 3]);
+  const { width, height } = useWindowDimensions();
+  const [sliceIndex, setsliceIndex] = useState<Array<number>>(
+    width > 1024
+      ? [0, 3]
+      : width > 768 && width < 1024
+      ? [0, 2]
+      : width > 520 && width < 768
+      ? [0, 1]
+      : [0, 0]
+  );
   const scrolltonext = () => {
     document
       .getElementById("scrollhere")
@@ -54,6 +64,16 @@ function Secondslide() {
             "linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
         }}
       ></div>
+      <div className="absolute top-[98vh] block md:hidden max-w-[80vw] m-auto text-white z-[100000000] ml-[10vw]">
+        <div className="text-3xl font-mulish font-[500] tracking-[0.05em] z-[1000000] pb-10">
+          Built on layer 2
+        </div>
+        <p className="font-text font-[14px]">
+          A platform where even small communities con access ai technology and
+          developers can use our platform to create their own data sets to
+          experiment, learn and earn with their creativity.
+        </p>
+      </div>
       <div className="absolute hidden top-[85vh] md:block m-auto text-center font-mont text-white text-[12px] w-[100vw] z-[10000] font-extralight">
         <span className="font-extralight">Discover more</span>
         <img
@@ -67,7 +87,7 @@ function Secondslide() {
         <img
           src={vector1}
           alt="vector1"
-          className="w-[20vw] left-[4vw] z-[15]"
+          className="w-[20vw] left-[4vw] z-[15] hidden md:block"
           style={{ height: "80vh" }}
         />
       </div>
@@ -98,7 +118,7 @@ function Secondslide() {
       >
         <div className="text-white w-[100vw] mt-[35vh] m-auto">
           <div className="flex">
-            <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%]">
+            <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
               A platform where even small communities con access ai technology
               and developers can use our platform to create their own data sets
               to experiment, learn and earn with their creativity.
@@ -144,9 +164,9 @@ function Secondslide() {
         <br />
         <br />
         <br />
-        <br />
+        {/* <br /> */}
         {/* Achievements carousel */}
-        <div className="m-auto mx-[10vw] flex justify-between">
+        <div className="flex m-auto mx-[10vw] justify-between">
           {achievements
             .slice(sliceIndex[0], sliceIndex[1] + 1)
             .map((item, index) =>
@@ -154,6 +174,7 @@ function Secondslide() {
                 <>
                   <div
                     className="flex justify-around w-[100%] h-[270px] rounded-[40px] mx-4 relative"
+                    key={index}
                     style={{
                       background:
                         "linear-gradient(211.41deg, rgba(29, 61, 96, 0.26) -10.07%, rgba(33, 195, 174, 0.29) 48.06%, rgba(61, 108, 164, 0.33) 108.66%)",
@@ -188,6 +209,7 @@ function Secondslide() {
                         "linear-gradient(215.34deg, #0A2439 -43.52%, #102143 27.96%, #214467 110.68%)",
                       boxShadow: "0px 25px 50px 25px #4276B2",
                     }}
+                    key={index}
                   >
                     <div className="flex flex-col justify-around max-h-[70%] my-auto">
                       <div className="font-text font-semibold text-xl text-center text-white tracking-wide py-[2vh] w-[80%] mx-auto">
