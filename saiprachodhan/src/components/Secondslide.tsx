@@ -116,7 +116,7 @@ function Secondslide() {
         className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]"
         id="scrollhere"
       >
-        <div className="text-white w-[100vw] mt-[35vh] m-auto">
+        <div className="text-white w-[100vw] mt-[40vh] m-auto">
           <div className="flex">
             <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
               A platform where even small communities con access ai technology
@@ -227,7 +227,7 @@ function Secondslide() {
         <br />
         <br />
         <br />
-        <div className="ml-[10vw] my-10 relative">
+        <div className="ml-[10vw] my-10 relative md:block hidden">
           <img src={Dots} alt="dots" />
           <div className="right-[10vw] my-10 absolute top-[5vh]">
             <img src={Boxes} alt="boxes" className="w-[28vw]" />

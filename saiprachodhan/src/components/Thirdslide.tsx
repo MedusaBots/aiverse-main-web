@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import styles from "../css/thirdslide.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Dots from "../images/Dots.png";
+import Ball from "../images/ball.png";
 import Fourthslide from "./Fourthslide";
 
 function Thirdslide() {
@@ -11,8 +13,14 @@ function Thirdslide() {
   }, []);
   return (
     <div className={`${styles.background}`}>
+      <div className="absolute left-[2vw] top-[230vh] z-[8] md:hidden block">
+        <img src={Dots} alt="ima" className="w-[80vw]" />
+      </div>
+      <div className="absolute right-0 top-[230vh] z-[10] md:hidden block">
+        <img src={Ball} alt="ima" className="w-[80vw] opacity-[0.5]" />
+      </div>
       <div className="nw:ml-[8vw]">
-        <h1 className="pt-[5vh] font-headingbold font-bold text-6xl text-white py-2">
+        <h1 className="text-center md:text-left pt-[5vh] font-headingbold font-bold text-6xl text-white py-2">
           Pillers Of aiverse
         </h1>
         <br />
@@ -20,7 +28,7 @@ function Thirdslide() {
         <br />
         <div className="cards nw:mr-[8vw] md:flex-row flex-col flex justify-between">
           <div
-            className="card mt-[20px] mr-[20px] min-h-[350px] mx-4 w-[240px] relative rounded-lg"
+            className="z-[10000000000] card my-[20px] min-h-[350px] m-auto md:mx-4 w-[240px] relative rounded-lg"
             data-aos="fade-up"
             data-aos-duration="1500"
             style={{
@@ -31,7 +39,7 @@ function Thirdslide() {
             }}
           >
             <div
-              className="transition-all duration-1000 ease-in-out absolute hover:top-[-20px] hover:left-[-20px] min-h-[350px] w-[240px] z-[10] rounded-lg"
+              className="transition-all duration-1000 ease-in-out absolute hover:top-[-20px] hover:left-[-20px] min-h-[350px] w-[240px]  rounded-lg z-[10000000000]"
               style={{
                 background:
                   "linear-gradient(210.96deg, #091E35 0.01%, #142D4D 42.05%, #0B273C 104.81%)",
@@ -55,7 +63,7 @@ function Thirdslide() {
             </div>
           </div>
           <div
-            className="card min-h-[350px] mb-[20px] mx-4 w-[240px] relative rounded-lg"
+            className="card min-h-[350px] my-[20px] m-auto md:mx-4 w-[240px] relative rounded-lg  z-[10000000000]"
             style={{
               border: "2px solid rgba(255, 255, 255, 0.05)",
               backdropFilter: "blur(41px)",
@@ -88,7 +96,7 @@ function Thirdslide() {
             </div>
           </div>
           <div
-            className="card mt-[20px] min-h-[350px] mx-4 w-[240px] relative rounded-lg"
+            className="card my-[20px] min-h-[350px] m-auto md:mx-4 w-[240px] relative rounded-lg z-[10000000000]"
             style={{
               border: "2px solid rgba(255, 255, 255, 0.05)",
               backdropFilter: "blur(41px)",

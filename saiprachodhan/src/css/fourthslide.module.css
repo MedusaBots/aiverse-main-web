@@ -5,3 +5,20 @@
   background-size: contain;
   opacity: 0.4;
 }
+
+.bgshape {
+  max-width: 400px;
+  height: auto;
+}
+
+.cardit {
+  background: linear-gradient(
+    210.96deg,
+    #0f2834 0.01%,
+    #1c3951 42.05%,
+    #14243e 104.81%
+  );
+  box-shadow: -23.609px 48.8461px 73.2692px 7px #17122b;
+  backdrop-filter: blur(20.3526px);
+  border-radius: 20px;
+}
