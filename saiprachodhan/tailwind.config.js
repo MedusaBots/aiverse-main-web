@@ -13,6 +13,7 @@ module.exports = {
         mont: ["Montserrat"],
       },
     },
+    screens: { nw: { min: "900px" }, ...defaultTheme.screens },
   },
   plugins: [],
 };
