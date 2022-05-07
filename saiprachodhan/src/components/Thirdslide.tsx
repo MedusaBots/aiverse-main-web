@@ -6,6 +6,7 @@ import Dots from "../images/Dots.png";
 import Ball from "../images/ball.png";
 import Fourthslide from "./Fourthslide";
 import Fifthslide from "./Fifthslide";
+import Footer from "./Footer";
 
 function Thirdslide() {
   useEffect(() => {
@@ -143,6 +144,10 @@ function Thirdslide() {
         </div>
       </div>
       <Fifthslide />
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 }
