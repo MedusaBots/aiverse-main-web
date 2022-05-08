@@ -4,6 +4,9 @@ import vector from "../images/Vector.png";
 import Notification from "../images/Notification.png";
 import styles from "../css/fourthslide.module.css";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+import Group1217 from "../images/Group1217.png";
+import Group1215 from "../images/Group1215.png";
+import Group1216 from "../images/Group1216.png";
 
 function Fourthslide() {
   const { width, height } = useWindowDimensions();
@@ -33,14 +36,20 @@ function Fourthslide() {
         <div className="flex justify-between md:flex-row flex-col">
           <div className="md:hidden my-4 overflow-x-scroll flex">
             <div
-              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[400px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
-            ></div>
+              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[320px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
+            >
+              <img src={Group1215} alt="" className="w-[250px] h-auto" />
+            </div>
             <div
-              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[400px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
-            ></div>
+              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[320px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
+            >
+              <img src={Group1216} alt="" className="w-[250px] h-auto" />
+            </div>
             <div
-              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[400px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
-            ></div>
+              className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[320px] mx-4 min-w-[250px] m-auto ${styles.cardit}`}
+            >
+              <img src={Group1217} alt="" className="w-[250px] h-auto" />
+            </div>
           </div>
           <div className="w-[100%] md:w-[35%] md:mx-0 mx-auto">
             <div
@@ -61,16 +70,22 @@ function Fourthslide() {
               className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[250px] mx-4 w-[190px] ${styles.cardit} relative z-[100000]`}
             >
               <div
-                className={`absolute top-[20px] left-[120px] card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[250px] mx-4 min-w-[190px] m-auto ${styles.cardit} z-[-4]`}
+                className={`absolute top-[20px] left-[120px] card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[250px] min-w-[190px] m-auto ${styles.cardit} z-[-4]`}
                 style={{ transform: "matrix(0.94, 0.36, -0.32, 0.93, 0, 0)" }}
-              ></div>
+              >
+                <img src={Group1217} alt="" className="w-[190px] h-[270px]" />
+              </div>
               <div
                 className={`absolute top-[20px] right-[120px] card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[250px] mx-4 min-w-[190px] m-auto ${styles.cardit} z-[-4]`}
                 style={{ transform: "matrix(0.94, -0.36, 0.32, 0.93, 0, 0)" }}
-              ></div>
+              >
+                <img src={Group1216} alt="" className="w-[190px] h-[270px]" />
+              </div>
               <div
                 className={`card bg-[linear-gradient(210.96deg, #0F2834 0.01%, #1C3951 42.05%, #14243E 104.81%)] min-h-[250px] w-[190px] ${styles.cardit} relative z-[100000]`}
-              ></div>
+              >
+                <img src={Group1215} alt="" className="w-[190px] h-[270px]" />
+              </div>
             </div>
           </div>
         </div>

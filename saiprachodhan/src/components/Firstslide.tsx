@@ -3,8 +3,36 @@ import style from "../css/firstslide.module.css";
 import menu from "../images/menu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discover from "../images/discover.png";
-import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
+
 function Firstslide() {
+  const detectProvider = () => {
+    let provider;
+    if (window.ethereum) {
+      provider = window.ethereum;
+    } else if (window.web3) {
+      provider = window.web3.currentProvider;
+    } else {
+      window.alert("Metamask not installed");
+    }
+    return provider;
+  };
+
+  const login = async () => {
+    const provider = detectProvider();
+    if (provider) {
+      if (provider !== window.ethereum) {
+        console.error("Not Window.ehereum provider");
+      }
+      await provider.request({
+        method: "eth_requestAccounts",
+      });
+    }
+  };
   return (
     <div className={`w-[100vw] h-[100vh] ${style.background} relative`}>
       <div className="absolute top-[22vh] lg:top-[18vh] text-center text-white m-auto w-[100vw] font-headingbold font-bold lg:text-[12vh] lg:leading-[12vh] leading-[5vh] text-[5vh]">
@@ -20,7 +48,10 @@ function Firstslide() {
           Whitepaper
         </button>
         <div className="py-1"></div>
-        <button className="bg-[#00C9E0] rounded-[8px] px-6 py-2  font-inter text-[16px] leading-[24px] mx-4 md:hidden">
+        <button
+          className="bg-[#00C9E0] rounded-[8px] px-6 py-2  font-inter text-[16px] leading-[24px] mx-4 md:hidden"
+          onClick={login}
+        >
           Connect to Wallet
         </button>
       </div>
@@ -28,7 +59,10 @@ function Firstslide() {
         Logo
       </div>
       <div className="absolute top-[4vh] right-[10vw] text-white font-text font-bold text-2xl flex">
-        <button className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden">
+        <button
+          className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
+          onClick={login}
+        >
           Connect to Wallet
         </button>
         <img
@@ -52,16 +86,25 @@ function Firstslide() {
             }}
           ></span>
         </div>
-        <a href="#">
+        <a href="https://twitter.com/AIVerse_Dai" className="z-[1000000000000]">
           <FontAwesomeIcon
             icon={faTwitter}
-            className="text-xl p-2 mr-4 cursor-pointer"
+            className="text-xl p-2 mr-4 cursor-pointer z-[100000000000000]"
           />
         </a>
-        <a href="#">
+        <a
+          href="https://www.instagram.com/ai.verse.dai/"
+          className="z-[1000000000000]"
+        >
           <FontAwesomeIcon
             icon={faInstagram}
-            className="text-xl p-2 mr-4 cursor-pointer"
+            className="text-xl p-2 mr-4 cursor-pointer z-[100000000000000]"
+          />
+        </a>
+        <a href="https://t.me/AIVERSE_DAI" className="z-[1000000000000]">
+          <FontAwesomeIcon
+            icon={faTelegram}
+            className="text-xl p-2 mr-4 cursor-pointer z-[100000000000000]"
           />
         </a>
       </div>
@@ -70,7 +113,7 @@ function Firstslide() {
           SCROLL
         </span>
       </div>
-      <div className="absolute block md:hidden m-auto text-center font-mont bottom-[18vh] text-white text-[12px] w-[100vw]">
+      <div className="absolute block md:hidden m-auto text-center font-mont bottom-[18vh] text-white text-[12px] w-[100vw] z-[1000000000000]">
         Discover more
         <img src={discover} alt="Discover" className="m-auto pt-4" />
       </div>

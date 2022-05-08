@@ -15,28 +15,28 @@ function Secondslide() {
   // Add achievements here then set slide index so that you can show achievemnts as cards
   const achievements = [
     {
-      title: "Low Gas",
-      text: "Up to 1/100 of L1 gas & cheaper than using optimistic rollups",
+      title: "AI Publisher",
+      text: "Developers can create their AI using our exclusive APIs",
     },
     {
-      title: "High Speed",
-      text: "2000+ transactions per second (tps) compared to 14tps on L1",
+      title: "Freedom to monetise",
+      text: "Developers can monetize their product (AI, Data or VR) the way they prefer (Rent or Sell)",
     },
     {
-      title: "Security",
-      text: "Secured by the main Ethereum blockchain",
+      title: "Come, Connect and Create",
+      text: "Developers can interact with one another and collaborate to create their products.",
     },
     {
-      title: "Frictionless Transfers",
-      text: "Effortlessly move your crypto between L1 and Layer 2 without delays",
+      title: " Bridge to Developer and Consumer",
+      text: "Connecting developers with the end consumer directly.",
     },
     {
-      title: "Low Gas",
-      text: "Up to 1/100 of L1 gas & cheaper than using optimistic rollups",
+      title: "Helping SMBs and SMEs",
+      text: "Seamless options to choose with affordable costs.",
     },
     {
-      title: "Frictionless Transfers",
-      text: "Effortlessly move your crypto between L1 and Layer 2 without delays",
+      title: "Building Metaverse with ease",
+      text: "Providing templates and thousands of assets to create a metaverse using  the easy drag 'n drop feature.",
     },
   ];
   // Set sliceIndex to have a carousel of achievements
@@ -112,12 +112,9 @@ function Secondslide() {
           className="bg-[#BE41EA] blur-[250px] opacity-[0.07] w-[50vw] left-[4vw] z-[7]"
         />
       </div>
-      <div
-        className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]"
-        id="scrollhere"
-      >
-        <div className="text-white w-[100vw] mt-[40vh] m-auto">
-          <div className="flex">
+      <div className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]">
+        <div className="text-white w-[100vw] mt-[30vh] m-auto">
+          <div className="flex pt-10" id="scrollhere">
             <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
               A platform where even small communities con access ai technology
               and developers can use our platform to create their own data sets

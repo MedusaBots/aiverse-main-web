@@ -7,6 +7,9 @@ import Ball from "../images/ball.png";
 import Fourthslide from "./Fourthslide";
 import Fifthslide from "./Fifthslide";
 import Footer from "./Footer";
+import U2E from "../images/U2E.png";
+import metaverse from "../images/metaverse.png";
+import Centre from "../images/Centre.png";
 
 function Thirdslide() {
   useEffect(() => {
@@ -52,17 +55,12 @@ function Thirdslide() {
                   backdropFilter: "blur(20.3526px)",
                 }}
               >
-                <div className="text-white font-poppins mx-auto text-center text-[14px] invisible p-2">
-                  Aiverse characters have emerged from a metaverse who will
-                  share their powers to users. Each characters of aiverse have
-                  specific power which can be leveraged by users in the form of
-                  AI applications
-                </div>
+                <img src={U2E} alt="Img" className="max-w-[70%] mx-auto p-2" />
                 <div className="text-white font-poppins  mx-auto text-center text-[12px] p-2 font-extralight tracking-[0.02em]">
-                  Aiverse characters have emerged from a metaverse who will
-                  share their powers to users. Each characters of aiverse have
-                  specific power which can be leveraged by users in the form of
-                  AI applications
+                  At Aiverse, people can create their own metaverse or use a
+                  prebuilt metaverse template with AI plugins. Aiverse allows
+                  its users to connect Metaverse and AI together; giving the
+                  ability to use AI within the metaverse.
                 </div>
               </div>
             </div>
@@ -88,11 +86,11 @@ function Thirdslide() {
                   backdropFilter: "blur(20.3526px)",
                 }}
               >
-                <div className="text-white font-poppins mx-auto text-center text-[14px] invisible p-2">
-                  Use-2-earn- Users can earn AIV tokens as they use our AI
-                  models . Higher the no. Of requests per day more aiv tokens
-                  will be awarded to users at the end of the day
-                </div>
+                <img
+                  src={Centre}
+                  alt="Img"
+                  className="max-w-[70%] mx-auto p-2"
+                />
                 <div className="text-white font-poppins  mx-auto text-center text-[12px] p-2 font-extralight tracking-[0.02em]">
                   Use-2-earn- Users can earn AIV tokens as they use our AI
                   models . Higher the no. Of requests per day more aiv tokens
@@ -122,17 +120,16 @@ function Thirdslide() {
                   backdropFilter: "blur(20.3526px)",
                 }}
               >
-                <div className="text-white font-poppins mx-auto text-center text-[14px] invisible p-2">
-                  Aiverse will be providing decentralized data set pools where
-                  developers can upload their data sets/ predictions and these
-                  can be access by consumers. Ai verse will also be providing
-                  its ready to use data sets
-                </div>
+                <img
+                  src={metaverse}
+                  alt="Img"
+                  className="max-w-[70%] mx-auto p-2"
+                />
                 <div className="text-white font-poppins  mx-auto text-center text-[12px] p-2 font-extralight tracking-[0.02em]">
-                  Aiverse will be providing decentralized data set pools where
-                  developers can upload their data sets/ predictions and these
-                  can be access by consumers. Ai verse will also be providing
-                  its ready to use data sets
+                  Aiverse is an e-commerce platform, where users can buy and
+                  sell deep tech technologies like AI, Data and VR applications
+                  in a very simple and interactive manner to facilitate
+                  communities and businesses with affordable pricing.
                 </div>
               </div>
             </div>
