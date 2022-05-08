@@ -1,0 +1,21 @@
+.styleit:hover {
+  background: linear-gradient(
+    211.41deg,
+    rgba(29, 61, 96, 0.26) -10.07%,
+    rgba(33, 195, 174, 0.29) 48.06%,
+    rgba(61, 108, 164, 0.33) 108.66%
+  );
+  box-shadow: 0px 25px 50px 25px #22f0cb;
+}
+
+.styleit {
+  background: linear-gradient(
+    215.34deg,
+    #0a2439 -43.52%,
+    #102143 27.96%,
+    #214467 110.68%
+  );
+  box-shadow: 0px 25px 50px 25px #4276b2;
+  z-index: 100000000000;
+  cursor: pointer;
+}

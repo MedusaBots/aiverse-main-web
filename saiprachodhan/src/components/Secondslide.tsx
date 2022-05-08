@@ -9,6 +9,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Dots from "../images/Dots.png";
 import Boxes from "../images/Img.png";
 import Thirdslide from "./Thirdslide";
+import styles from "../css/second.module.css";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 function Secondslide() {
@@ -166,60 +167,23 @@ function Secondslide() {
         <div className="flex m-auto mx-[10vw] justify-between">
           {achievements
             .slice(sliceIndex[0], sliceIndex[1] + 1)
-            .map((item, index) =>
-              index % 4 === 0 ? (
-                <>
-                  <div
-                    className="flex justify-around w-[100%] h-[270px] rounded-[40px] mx-4 relative"
-                    key={index}
-                    style={{
-                      background:
-                        "linear-gradient(211.41deg, rgba(29, 61, 96, 0.26) -10.07%, rgba(33, 195, 174, 0.29) 48.06%, rgba(61, 108, 164, 0.33) 108.66%)",
-                      boxShadow: "0px 25px 50px 25px #22F0CB",
-                    }}
-                  >
-                    <div
-                      className="absolute left-[-1vw] top-[10px] z-[100000] bg-[#7741EA] opacity-[0.5]"
-                      style={{
-                        transform: "matrix(-0.93, -0.66, -0.29, 0.85, 0, 0)",
-                        filter: "blur(250px)",
-                      }}
-                    >
-                      <img src={vector4} alt="vector4" className="z-[100000]" />
+            .map((item, index) => (
+              <>
+                <div
+                  className={`${styles.styleit} flex justify-around w-[100%] h-[270px] rounded-[40px] mx-4`}
+                  key={index}
+                >
+                  <div className="flex flex-col justify-around max-h-[70%] my-auto te">
+                    <div className="font-text font-semibold text-xl text-center text-[#41EAD4] tracking-wide py-[2vh] w-[80%] mx-auto">
+                      {item["title"]}
                     </div>
-                    <div className="flex flex-col justify-around max-h-[70%] my-auto">
-                      <div className="font-text font-semibold text-xl text-center text-[#41EAD4] tracking-wide py-[2vh] w-[80%] mx-auto">
-                        {item["title"]}
-                      </div>
-                      <div className="font-poppins text-sm text-center text-white tracking-[0.01em] w-[80%] mx-auto  py-[2vh]">
-                        {item["text"]}
-                      </div>
+                    <div className="font-poppins text-sm text-center text-white tracking-[0.01em] w-[80%] mx-auto  py-[2vh]">
+                      {item["text"]}
                     </div>
                   </div>
-                </>
-              ) : (
-                <>
-                  <div
-                    className="flex justify-around w-[100%] h-[270px] rounded-[40px] mx-4"
-                    style={{
-                      background:
-                        "linear-gradient(215.34deg, #0A2439 -43.52%, #102143 27.96%, #214467 110.68%)",
-                      boxShadow: "0px 25px 50px 25px #4276B2",
-                    }}
-                    key={index}
-                  >
-                    <div className="flex flex-col justify-around max-h-[70%] my-auto">
-                      <div className="font-text font-semibold text-xl text-center text-white tracking-wide py-[2vh] w-[80%] mx-auto">
-                        {item["title"]}
-                      </div>
-                      <div className="font-poppins text-sm text-center text-white tracking-[0.01em] w-[80%] mx-auto  py-[2vh]">
-                        {item["text"]}
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )
-            )}
+                </div>
+              </>
+            ))}
         </div>
         <br />
         <br />

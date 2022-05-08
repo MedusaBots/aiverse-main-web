@@ -77,17 +77,6 @@ function Tokenomics1() {
           <img src={Logo2} alt="Logo" className="w-auto md:h-[80px] h-[60px]" />
         </div>
         <div className="absolute top-[4vh] right-[10vw] text-white font-text font-bold text-2xl flex z-[10000000]">
-          <button
-            className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
-            onClick={connectWallet}
-          >
-            {walletAddress
-              ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(
-                  walletAddress.length - 5,
-                  walletAddress.length
-                )}`
-              : "Connect to Wallet"}
-          </button>
           {dropdown ? (
             <img
               src={cross}
