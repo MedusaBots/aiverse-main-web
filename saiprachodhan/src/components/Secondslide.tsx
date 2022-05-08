@@ -116,10 +116,10 @@ function Secondslide() {
       <div className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]">
         <div className="text-white w-[100vw] mt-[20vh] m-auto">
           <div className="flex pt-10" id="scrollhere">
-            <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
-              A platform where even small communities con access ai technology
-              and developers can use our platform to create their own data sets
-              to experiment, learn and earn with their creativity.
+            <div className="max-w-[50vw] ml-[15vw] text-sm text-lg font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
+              A Pocket-Friendly AI marketplace for Small scale Businesses and
+              communities. aiverse is a platform for developers to use their
+              skills to learn and earn by building AI models.
             </div>
             <div
               className="justify-end flex w-[20vw] z-[100000]"
