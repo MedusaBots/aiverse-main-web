@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../css/firstslide.module.css";
 import menu from "../images/menu.png";
+import cross from "../images/cross.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discover from "../images/discover.png";
 import Logo2 from "../images/logo2.png";
@@ -9,8 +10,9 @@ import {
   faTwitter,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
-
+import Menu from "./Menu";
 function Firstslide() {
+  const [dropdown, setdropdown] = useState(false);
   const detectProvider = () => {
     let provider;
     if (window.ethereum) {
@@ -56,6 +58,11 @@ function Firstslide() {
           Connect to Wallet
         </button>
       </div>
+      {dropdown && (
+        <div className="absolute top-[10vh] right-[10vw]">
+          <Menu />
+        </div>
+      )}
       <div className="absolute top-[4vh] left-[10vw] text-white font-text font-bold text-2xl">
         <img src={Logo2} alt="Logo" className="w-auto md:h-[80px] h-[60px]" />
       </div>
@@ -66,12 +73,23 @@ function Firstslide() {
         >
           Connect to Wallet
         </button>
-        <img
-          src={menu}
-          alt="Menu"
-          className="cursor-pointer my-2"
-          style={{ width: 24, height: 24 }}
-        />
+        {dropdown ? (
+          <img
+            src={cross}
+            alt="Menu"
+            className="cursor-pointer my-2"
+            style={{ width: 24, height: 24 }}
+            onClick={() => setdropdown((prev) => !prev)}
+          />
+        ) : (
+          <img
+            src={menu}
+            alt="Menu"
+            className="cursor-pointer my-2"
+            style={{ width: 24, height: 24 }}
+            onClick={() => setdropdown((prev) => !prev)}
+          />
+        )}
       </div>
       <div className="absolute bottom-[20vh] md:bottom-[26vh] right-[1vw] md:right-[10vw] flex flex-col  text-[#41EAD4]">
         <div className="absolute right-[9.6vw] bottom-[4vh] rotate-[-90deg] md:hidden flex">
