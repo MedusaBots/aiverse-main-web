@@ -113,7 +113,7 @@ function Secondslide() {
         />
       </div>
       <div className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]">
-        <div className="text-white w-[100vw] mt-[30vh] m-auto">
+        <div className="text-white w-[100vw] mt-[20vh] m-auto">
           <div className="flex pt-10" id="scrollhere">
             <div className="max-w-[50vw] ml-[15vw] text-sm font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
               A platform where even small communities con access ai technology

@@ -3,6 +3,7 @@ import style from "../css/firstslide.module.css";
 import menu from "../images/menu.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discover from "../images/discover.png";
+import Logo2 from "../images/logo2.png";
 import {
   faInstagram,
   faTwitter,
@@ -56,7 +57,7 @@ function Firstslide() {
         </button>
       </div>
       <div className="absolute top-[4vh] left-[10vw] text-white font-text font-bold text-2xl">
-        Logo
+        <img src={Logo2} alt="Logo" className="w-auto md:h-[80px] h-[60px]" />
       </div>
       <div className="absolute top-[4vh] right-[10vw] text-white font-text font-bold text-2xl flex">
         <button
