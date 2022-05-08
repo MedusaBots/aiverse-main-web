@@ -1,10 +1,8 @@
-
-import  { useState } from 'react';
-import { ethers } from 'ethers';
-import  './btn.css';
+import { useState } from "react";
+import { ethers } from "ethers";
+import "./btn.css";
 
 function Btn() {
-
   // Properties
 
   const [walletAddress, setWalletAddress] = useState("");
@@ -14,11 +12,11 @@ function Btn() {
   // Requests access to the user's META MASK WALLET
   // https://metamask.io
   async function requestAccount() {
-    console.log('Requesting account...');
+    console.log("Requesting account...");
 
-    // ❌ Check if Meta Mask Extension exists 
-    if(window.ethereum) {
-      console.log('detected');
+    // ❌ Check if Meta Mask Extension exists
+    if (window.ethereum) {
+      console.log("detected");
 
       try {
         const accounts = await window.ethereum.request({
@@ -26,17 +24,16 @@ function Btn() {
         });
         setWalletAddress(accounts[0]);
       } catch (error) {
-        console.log('Error connecting...');
+        console.log("Error connecting...");
       }
-
     } else {
-      alert('Meta Mask not detected');
+      alert("Meta Mask not detected");
     }
   }
 
   // Create a provider to interact with a smart contract
   async function connectWallet() {
-    if(typeof window.ethereum !== 'undefined') {
+    if (typeof window.ethereum !== "undefined") {
       await requestAccount();
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -46,12 +43,8 @@ function Btn() {
   return (
     <div className="App">
       <header className="App-header">
-        <button
+        <button className="text" onClick={requestAccount}  >Connect Wallet {walletAddress}</button>
         
-        onClick={requestAccount}
-        
-        >Connect Wallet</button>
-        <h4>Wallet Address: {walletAddress}</h4>
       </header>
     </div>
   );
