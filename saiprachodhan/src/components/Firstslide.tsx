@@ -13,29 +13,40 @@ import {
 import Menu from "./Menu";
 function Firstslide() {
   const [dropdown, setdropdown] = useState(false);
-  const detectProvider = () => {
-    let provider;
-    if (window.ethereum) {
-      provider = window.ethereum;
-    } else if (window.web3) {
-      provider = window.web3.currentProvider;
-    } else {
-      window.alert("Metamask not installed");
-    }
-    return provider;
-  };
+  const [walletAddress, setWalletAddress] = useState("");
 
-  const login = async () => {
-    const provider = detectProvider();
-    if (provider) {
-      if (provider !== window.ethereum) {
-        console.error("Not Window.ehereum provider");
+  // Helper Functions
+
+  // Requests access to the user's META MASK WALLET
+  // https://metamask.io
+  async function requestAccount() {
+    console.log("Requesting account...");
+
+    // ❌ Check if Meta Mask Extension exists
+    if (window.ethereum) {
+      console.log("detected");
+
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0]);
+      } catch (error) {
+        console.log("Error connecting...");
       }
-      await provider.request({
-        method: "eth_requestAccounts",
-      });
+    } else {
+      alert("Meta Mask not detected");
     }
-  };
+  }
+
+  // Create a provider to interact with a smart contract
+  async function connectWallet() {
+    if (typeof window.ethereum !== "undefined") {
+      await requestAccount();
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+    }
+  }
   return (
     <div className={`w-[100vw] h-[100vh] ${style.background} relative`}>
       <div className="absolute top-[22vh] lg:top-[18vh] text-center text-white m-auto w-[100vw] font-headingbold font-bold lg:text-[12vh] lg:leading-[12vh] leading-[5vh] text-[5vh]">
@@ -53,9 +64,9 @@ function Firstslide() {
         <div className="py-1"></div>
         <button
           className="bg-[#00C9E0] rounded-[8px] px-6 py-2  font-inter text-[16px] leading-[24px] mx-4 md:hidden"
-          onClick={login}
+          onClick={connectWallet}
         >
-          Connect to Wallet
+          {walletAddress ? walletAddress : "Connect to Wallet"}
         </button>
       </div>
       {dropdown && (
@@ -69,9 +80,9 @@ function Firstslide() {
       <div className="absolute top-[4vh] right-[10vw] text-white font-text font-bold text-2xl flex">
         <button
           className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
-          onClick={login}
+          onClick={connectWallet}
         >
-          Connect to Wallet
+          {walletAddress ? walletAddress : "Connect to Wallet"}
         </button>
         {dropdown ? (
           <img

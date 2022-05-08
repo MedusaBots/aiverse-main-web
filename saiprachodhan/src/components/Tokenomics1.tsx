@@ -21,29 +21,40 @@ import Logo2 from "../images/logo2.png";
 import Menu from "./Menu";
 
 function Tokenomics1() {
-  const detectProvider = () => {
-    let provider;
-    if (window.ethereum) {
-      provider = window.ethereum;
-    } else if (window.web3) {
-      provider = window.web3.currentProvider;
-    } else {
-      window.alert("Metamask not installed");
-    }
-    return provider;
-  };
+  const [walletAddress, setWalletAddress] = useState("");
 
-  const login = async () => {
-    const provider = detectProvider();
-    if (provider) {
-      if (provider !== window.ethereum) {
-        console.error("Not Window.ehereum provider");
+  // Helper Functions
+
+  // Requests access to the user's META MASK WALLET
+  // https://metamask.io
+  async function requestAccount() {
+    console.log("Requesting account...");
+
+    // ❌ Check if Meta Mask Extension exists
+    if (window.ethereum) {
+      console.log("detected");
+
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0]);
+      } catch (error) {
+        console.log("Error connecting...");
       }
-      await provider.request({
-        method: "eth_requestAccounts",
-      });
+    } else {
+      alert("Meta Mask not detected");
     }
-  };
+  }
+
+  // Create a provider to interact with a smart contract
+  async function connectWallet() {
+    if (typeof window.ethereum !== "undefined") {
+      await requestAccount();
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+    }
+  }
   const [dropdown, setdropdown] = useState(false);
   return (
     <>
@@ -68,9 +79,9 @@ function Tokenomics1() {
         <div className="absolute top-[4vh] right-[10vw] text-white font-text font-bold text-2xl flex z-[10000000]">
           <button
             className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
-            onClick={login}
+            onClick={connectWallet}
           >
-            Connect to Wallet
+            {walletAddress ? walletAddress.slice(0, 20) : "Connect to Wallet"}
           </button>
           {dropdown ? (
             <img
