@@ -67,8 +67,8 @@ function Firstslide() {
           onClick={connectWallet}
         >
           {walletAddress
-            ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
-                walletAddress.length - 3,
+            ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(
+                walletAddress.length - 5,
                 walletAddress.length
               )}`
             : "Connect to Wallet"}
@@ -88,8 +88,8 @@ function Firstslide() {
           onClick={connectWallet}
         >
           {walletAddress
-            ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
-                walletAddress.length - 3,
+            ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(
+                walletAddress.length - 5,
                 walletAddress.length
               )}`
             : "Connect to Wallet"}
