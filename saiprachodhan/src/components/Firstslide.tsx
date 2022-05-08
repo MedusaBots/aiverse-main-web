@@ -66,7 +66,12 @@ function Firstslide() {
           className="bg-[#00C9E0] rounded-[8px] px-6 py-2  font-inter text-[16px] leading-[24px] mx-4 md:hidden"
           onClick={connectWallet}
         >
-          {walletAddress ? walletAddress : "Connect to Wallet"}
+          {walletAddress
+            ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
+                walletAddress.length - 3,
+                walletAddress.length
+              )}`
+            : "Connect to Wallet"}
         </button>
       </div>
       {dropdown && (
@@ -82,7 +87,12 @@ function Firstslide() {
           className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
           onClick={connectWallet}
         >
-          {walletAddress ? walletAddress : "Connect to Wallet"}
+          {walletAddress
+            ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
+                walletAddress.length - 3,
+                walletAddress.length
+              )}`
+            : "Connect to Wallet"}
         </button>
         {dropdown ? (
           <img

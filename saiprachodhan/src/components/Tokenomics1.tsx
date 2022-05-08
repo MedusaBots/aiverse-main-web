@@ -81,7 +81,12 @@ function Tokenomics1() {
             className="bg-[#00C9E0] rounded-[8px] px-10 py-2  font-inter text-[16px] leading-[24px] mx-4 md:block hidden"
             onClick={connectWallet}
           >
-            {walletAddress ? walletAddress.slice(0, 20) : "Connect to Wallet"}
+            {walletAddress
+              ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
+                  walletAddress.length - 3,
+                  walletAddress.length
+                )}`
+              : "Connect to Wallet"}
           </button>
           {dropdown ? (
             <img
