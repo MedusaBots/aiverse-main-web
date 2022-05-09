@@ -212,7 +212,7 @@ function Fifthslide() {
                     // the roadmap resizes at 1170px
                   >
                     <p style={{}} className="">
-                      Q4
+                      Q2
                     </p>
                   </div>
                 </>
@@ -246,7 +246,7 @@ function Fifthslide() {
                     // the roadmap resizes at 1170px
                   >
                     <p style={{}} className="">
-                      Q1
+                      Q3
                     </p>
                   </div>
                 </>
