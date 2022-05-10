@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "../css/firstslide.module.css";
 import menu from "../images/menu.png";
 import cross from "../images/cross.png";
@@ -47,6 +47,9 @@ function Firstslide() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
     }
   }
+  useEffect(() => {
+    connectWallet();
+  }, []);
   return (
     <div className={`w-[100vw] h-[100vh] ${style.background} relative`}>
       <div className="absolute top-[22vh] lg:top-[18vh] text-center text-white m-auto w-[100vw] font-headingbold font-bold lg:text-[12vh] lg:leading-[12vh] leading-[5vh] text-[5vh]">
