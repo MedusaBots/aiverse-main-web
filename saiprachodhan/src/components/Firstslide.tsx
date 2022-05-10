@@ -48,7 +48,9 @@ function Firstslide() {
     }
   }
   useEffect(() => {
-    connectWallet();
+    if (walletAddress != "") {
+      connectWallet();
+    }
   }, []);
   return (
     <div className={`w-[100vw] h-[100vh] ${style.background} relative`}>
