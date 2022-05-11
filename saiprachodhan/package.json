@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@coinbase/wallet-sdk": "^3.0.11",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -15,15 +16,23 @@
     "@types/node": "^16.11.33",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "@walletconnect/web3-provider": "^1.7.8",
     "aos": "^2.3.4",
+    "bitski": "^0.14.1",
+    "buffer": "^6.0.3",
+    "coinbase": "^2.0.8",
     "font-awesome": "^4.7.0",
+    "node-polyfill-webpack-plugin": "^1.1.4",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-vertical-timeline-component": "^3.5.2",
     "typescript": "^4.6.4",
-    "web-vitals": "^2.1.4"
+    "walletconnect": "^1.7.8",
+    "web-vitals": "^2.1.4",
+    "web3": "^1.7.3",
+    "web3modal": "^1.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
