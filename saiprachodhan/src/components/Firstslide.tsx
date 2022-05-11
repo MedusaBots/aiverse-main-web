@@ -4,6 +4,7 @@ import menu from "../images/menu.png";
 import cross from "../images/cross.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import discover from "../images/discover.png";
+import { providers } from "web3modal";
 import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -24,34 +25,86 @@ function Firstslide() {
 
   // Requests access to the user's META MASK WALLET
   // https://metamask.io
-  const providerOptions = {
-    bitski: {
-      package: Bitski, // required
-      options: {
-        clientId: "BITSKI_CLIENT_ID", // required
-        callbackUrl: "BITSKI_CALLBACK_URL", // required
-      },
-    },
-    walletconnect: {
-      package: WalletConnectProvider, // required
-      options: {
-        infuraId: "INFURA_ID", // required
-      },
-    },
-    coinbasewallet: {
-      package: CoinbaseWalletSDK, // Required
-      options: {
-        appName: "web3modal", // Required
-        infuraId: "INFURA_ID", // Required
-        rpc: "", // Optional if `infuraId` is provided; otherwise it's required
-        chainId: 1, // Optional. It defaults to 1 if not provided
-        darkMode: false, // Optional. Use dark theme, defaults to false
-      },
-    },
-    binancechainwallet: {
-      package: true,
-    },
-  };
+  const providerOptions =
+    window.ethereum !== undefined
+      ? {
+          bitski: {
+            package: Bitski, // required
+            options: {
+              clientId: "BITSKI_CLIENT_ID", // required
+              callbackUrl: "BITSKI_CALLBACK_URL", // required
+            },
+          },
+          walletconnect: {
+            package: WalletConnectProvider, // required
+            options: {
+              infuraId: "INFURA_ID", // required
+            },
+          },
+          coinbasewallet: {
+            package: CoinbaseWalletSDK, // Required
+            options: {
+              appName: "web3modal", // Required
+              infuraId: "INFURA_ID", // Required
+              rpc: "", // Optional if `infuraId` is provided; otherwise it's required
+              chainId: 1, // Optional. It defaults to 1 if not provided
+              darkMode: false, // Optional. Use dark theme, defaults to false
+            },
+          },
+          "custom-example": {
+            display: {
+              logo: providers.METAMASK.logo,
+              name: "MetaMask",
+              description: "Connect using browser wallet",
+            },
+            package: {},
+            connector: async () => {
+              const provider = new ethers.providers.Web3Provider(
+                window.ethereum
+              );
+              provider.enable();
+
+              return provider;
+            },
+          },
+        }
+      : {
+          bitski: {
+            package: Bitski, // required
+            options: {
+              clientId: "BITSKI_CLIENT_ID", // required
+              callbackUrl: "BITSKI_CALLBACK_URL", // required
+            },
+          },
+          walletconnect: {
+            package: WalletConnectProvider, // required
+            options: {
+              infuraId: "INFURA_ID", // required
+            },
+          },
+          coinbasewallet: {
+            package: CoinbaseWalletSDK, // Required
+            options: {
+              appName: "web3modal", // Required
+              infuraId: "INFURA_ID", // Required
+              rpc: "", // Optional if `infuraId` is provided; otherwise it's required
+              chainId: 1, // Optional. It defaults to 1 if not provided
+              darkMode: false, // Optional. Use dark theme, defaults to false
+            },
+          },
+          "custom-example": {
+            display: {
+              logo: providers.METAMASK.logo,
+              name: "MetaMask",
+              description: "Connect using browser wallet",
+            },
+            package: {},
+            connector: async () => {
+              window.open("https://metamask.io");
+              throw new Error("MetaMask not installed");
+            },
+          },
+        };
 
   const web3Modal = new Web3Modal({
     network: "mainnet", // optional
