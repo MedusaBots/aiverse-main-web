@@ -10,7 +10,7 @@ import Startup from "../images/Logos/Startup.png";
 import Maintoken from "../images/Logos/Maintokenlogo.webp";
 import Sketchfab from "../images/Logos/sketchfab.svg";
 import polygon from "../images/Logos/polygon.svg";
-import microsoft from "../images/Logos/microsoft.webp";
+import microsoft from "../images/Logos/Microsoft.png";
 import launch from "../images/Logos/launch.png";
 import polygonstudios from "../images/Logos/polygonstudios.png";
 import "../css/slider.css";

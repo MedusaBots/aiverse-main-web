@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c0e78681.css",
-    "main.js": "/static/js/main.917aae71.js",
+    "main.js": "/static/js/main.32ece3e1.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Background1.png": "/static/media/Background1.7cd092d05d1bd2f2f2ca.png",
     "static/media/3.png": "/static/media/3.a8d15ae61f1ad594fd4e.png",
@@ -31,10 +31,10 @@
     "static/media/Mulish-Bold.ttf": "/static/media/Mulish-Bold.1f6c3935d7359190d7dd.ttf",
     "static/media/Centre.png": "/static/media/Centre.26cb65a75945be6d35b1.png",
     "static/media/Img.png": "/static/media/Img.0a8940a969814ec06e52.png",
-    "static/media/launch.png": "/static/media/launch.faad04a83133be4360aa.png",
+    "static/media/launch.png": "/static/media/launch.5fb7f8c66b37b1227d9d.png",
     "static/media/U2E.png": "/static/media/U2E.b55b939ce327da8a49a9.png",
-    "static/media/microsoft.webp": "/static/media/microsoft.e3d9f334328460ffaaac.webp",
     "static/media/metaverse.png": "/static/media/metaverse.b61bf51067ec823b5d4e.png",
+    "static/media/Microsoft.png": "/static/media/Microsoft.8d99611f6bb0e28dd625.png",
     "static/media/logo2.png": "/static/media/logo2.bde3835d0398efe75c86.png",
     "static/media/Inception.png": "/static/media/Inception.069b1422acf2b16621a2.png",
     "static/media/cross.png": "/static/media/cross.480f2b59be0c7d3a4ff2.png",
@@ -42,11 +42,11 @@
     "static/media/sketchfab.svg": "/static/media/sketchfab.c83ffa9fa1f4faa63c2c125d9c88170e.svg",
     "index.html": "/index.html",
     "main.c0e78681.css.map": "/static/css/main.c0e78681.css.map",
-    "main.917aae71.js.map": "/static/js/main.917aae71.js.map",
+    "main.32ece3e1.js.map": "/static/js/main.32ece3e1.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0e78681.css",
-    "static/js/main.917aae71.js"
+    "static/js/main.32ece3e1.js"
   ]
 }
