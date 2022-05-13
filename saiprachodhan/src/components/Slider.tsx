@@ -4,10 +4,13 @@ import "swiper/css/bundle";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import three from "../images/3.png";
-import Background1 from "../images/Background1.png";
+import Inception from "../images/Logos/Inception.png";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-
+import Startup from "../images/Logos/Startup.png";
+import Maintoken from "../images/Logos/Maintokenlogo.webp";
+import Sketchfab from "../images/Logos/sketchfab.svg";
+import polygon from "../images/Logos/polygon.svg";
+import polygonstudios from "../images/Logos/polygonstudios.png";
 import "../css/slider.css";
 
 // import required modules
@@ -18,6 +21,32 @@ function Slider() {
   useEffect(() => {
     setslideperview(width > 1300 ? 8 : width > 768 ? 5 : width > 500 ? 4 : 2);
   }, [width]);
+  const logos = [
+    {
+      logo: polygon,
+      link: "https://polygon.technology/",
+    },
+    {
+      logo: Inception,
+      link: "https://www.nvidia.com/en-us/startups/#",
+    },
+    {
+      logo: Startup,
+      link: "https://www.startupindia.gov.in/",
+    },
+    {
+      logo: Sketchfab,
+      link: "https://sketchfab.com/",
+    },
+    {
+      logo: Maintoken,
+      link: "https://defiantplatform.com/",
+    },
+    {
+      logo: polygonstudios,
+      link: "https://polygonstudios.com/",
+    },
+  ];
   return (
     <div className="mb-32">
       <h1 className="text-center font-headingbold font-bold text-6xl text-white mb-16">
@@ -39,36 +68,15 @@ function Slider() {
         modules={[Autoplay, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={three} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={three} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={three} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={Background1} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={three} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper_slide">
-            <img src={three} alt="" />
-          </div>
-        </SwiperSlide>
+        {logos.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="swiper_slide">
+              <a href={item.link} target="_blank">
+                <img src={item.logo} alt="" />
+              </a>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
