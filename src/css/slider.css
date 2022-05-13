@@ -58,12 +58,12 @@
   background-color: white;
 }
 
-img {
+.swiper-slide img {
   -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);
 }
 
-img:hover {
+.swiper-slide img:hover {
   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
   filter: grayscale(0%);
 }

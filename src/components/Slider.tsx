@@ -27,22 +27,27 @@ function Slider() {
     {
       logo: polygon,
       link: "https://polygon.technology/",
+      text: "",
     },
     {
       logo: Inception,
       link: "https://www.nvidia.com/en-us/startups/#",
+      text: "Elite Member of Nvidia Inception",
     },
     {
       logo: Startup,
       link: "https://www.startupindia.gov.in/",
+      text: "Won India's Metaverse Challenge",
     },
     {
       logo: Sketchfab,
       link: "https://sketchfab.com/",
+      text: "Platform Partner",
     },
     {
       logo: Maintoken,
       link: "https://defiantplatform.com/",
+      text: "Strategic Partnership With defiant",
     },
     {
       logo: polygonstudios,
@@ -51,10 +56,12 @@ function Slider() {
     {
       logo: microsoft,
       link: "https://startups.microsoft.com/",
+      text: "Member of Microsoft Startups Program",
     },
     {
       logo: launch,
       link: "https://www.thelaunchhive.com/",
+      text: "Community Partner",
     },
   ];
   return (
@@ -83,6 +90,9 @@ function Slider() {
             <div className="swiper_slide">
               <a href={item.link} target="_blank">
                 <img src={item.logo} alt="" />
+                <div className="font-text text-[14px] text-white p-2">
+                  {item.text}
+                </div>
               </a>
             </div>
           </SwiperSlide>
