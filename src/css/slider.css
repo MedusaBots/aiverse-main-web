@@ -53,11 +53,18 @@
 
 .swiper-button-prev:after :hover {
   background-color: white;
+  display: none;
 }
 .swiper-button-next:after :hover {
+  display: none;
   background-color: white;
 }
-
+.swiper-button-next {
+  display: none;
+}
+.swiper-button-prev {
+  display: none;
+}
 .swiper-slide img {
   -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
   filter: grayscale(80%);

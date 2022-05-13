@@ -21,7 +21,7 @@ function Slider() {
   const { width, height } = useWindowDimensions();
   const [slideperview, setslideperview] = useState(0);
   useEffect(() => {
-    setslideperview(width > 1300 ? 8 : width > 768 ? 5 : width > 500 ? 4 : 2);
+    setslideperview(width > 1300 ? 4 : width > 768 ? 3 : width > 500 ? 2 : 1);
   }, [width]);
   const logos = [
     {
@@ -90,9 +90,9 @@ function Slider() {
             <div className="swiper_slide">
               <a href={item.link} target="_blank">
                 <img src={item.logo} alt="" />
-                <div className="font-text text-[14px] text-white p-2">
+                {/* <div className="font-text text-[14px] text-white p-2">
                   {item.text}
-                </div>
+                </div> */}
               </a>
             </div>
           </SwiperSlide>
