@@ -57,3 +57,13 @@
 .swiper-button-next:after :hover {
   background-color: white;
 }
+
+img {
+  -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
+}
+
+img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
