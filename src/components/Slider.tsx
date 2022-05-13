@@ -27,7 +27,7 @@ function Slider() {
     {
       logo: polygon,
       link: "https://polygon.technology/",
-      text: "",
+      text: "Aiverse partnership with Polygon",
     },
     {
       logo: Inception,
