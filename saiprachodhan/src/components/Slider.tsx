@@ -10,6 +10,8 @@ import Startup from "../images/Logos/Startup.png";
 import Maintoken from "../images/Logos/Maintokenlogo.webp";
 import Sketchfab from "../images/Logos/sketchfab.svg";
 import polygon from "../images/Logos/polygon.svg";
+import microsoft from "../images/Logos/microsoft.webp";
+import launch from "../images/Logos/launch.png";
 import polygonstudios from "../images/Logos/polygonstudios.png";
 import "../css/slider.css";
 
@@ -46,10 +48,18 @@ function Slider() {
       logo: polygonstudios,
       link: "https://polygonstudios.com/",
     },
+    {
+      logo: microsoft,
+      link: "https://startups.microsoft.com/",
+    },
+    {
+      logo: launch,
+      link: "https://www.thelaunchhive.com/",
+    },
   ];
   return (
     <div className="mb-32">
-      <h1 className="text-center font-headingbold font-bold text-6xl text-white mb-16">
+      <h1 className="text-center font-headingbold font-bold text-6xl text-white mb-4">
         Early supporters
       </h1>
       <Swiper

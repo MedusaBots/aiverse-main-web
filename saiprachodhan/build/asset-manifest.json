@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1635d369.css",
-    "main.js": "/static/js/main.92285dfa.js",
+    "main.css": "/static/css/main.c0e78681.css",
+    "main.js": "/static/js/main.917aae71.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Background1.png": "/static/media/Background1.7cd092d05d1bd2f2f2ca.png",
     "static/media/3.png": "/static/media/3.a8d15ae61f1ad594fd4e.png",
@@ -18,28 +18,35 @@
     "static/media/Group1215.png": "/static/media/Group1215.d240f8e077c6d7414286.png",
     "static/media/Group1201.png": "/static/media/Group1201.29d583112cd5d1822de6.png",
     "static/media/Group1216.png": "/static/media/Group1216.3d967b85697a50338156.png",
+    "static/media/polygonstudios.png": "/static/media/polygonstudios.9e75e2e53370f650ff20.png",
     "static/media/Group1217.png": "/static/media/Group1217.1d83cecdf946a454ace6.png",
     "static/media/Group1097.png": "/static/media/Group1097.3e3265193ce1762a60ad.png",
     "static/media/ball.png": "/static/media/ball.c0263e05331b3ab8f427.png",
     "static/media/Vector6.png": "/static/media/Vector6.cd33ac9175ed511d4a54.png",
     "static/media/Group1094.png": "/static/media/Group1094.85cbbb7515cfcffa3583.png",
+    "static/media/Maintokenlogo.webp": "/static/media/Maintokenlogo.9910889a9e9cd296a0dc.webp",
     "static/media/Notification.png": "/static/media/Notification.4e6c544653e199abe4e6.png",
     "static/media/Group1199.png": "/static/media/Group1199.2356803eeec002753539.png",
     "static/media/Mulish-Regular.ttf": "/static/media/Mulish-Regular.06ce9c37c31ae94797a2.ttf",
     "static/media/Mulish-Bold.ttf": "/static/media/Mulish-Bold.1f6c3935d7359190d7dd.ttf",
     "static/media/Centre.png": "/static/media/Centre.26cb65a75945be6d35b1.png",
     "static/media/Img.png": "/static/media/Img.0a8940a969814ec06e52.png",
+    "static/media/launch.png": "/static/media/launch.faad04a83133be4360aa.png",
     "static/media/U2E.png": "/static/media/U2E.b55b939ce327da8a49a9.png",
+    "static/media/microsoft.webp": "/static/media/microsoft.e3d9f334328460ffaaac.webp",
     "static/media/metaverse.png": "/static/media/metaverse.b61bf51067ec823b5d4e.png",
     "static/media/logo2.png": "/static/media/logo2.bde3835d0398efe75c86.png",
+    "static/media/Inception.png": "/static/media/Inception.069b1422acf2b16621a2.png",
     "static/media/cross.png": "/static/media/cross.480f2b59be0c7d3a4ff2.png",
+    "static/media/polygon.svg": "/static/media/polygon.99647caf03451721234312eb4f4da675.svg",
+    "static/media/sketchfab.svg": "/static/media/sketchfab.c83ffa9fa1f4faa63c2c125d9c88170e.svg",
     "index.html": "/index.html",
-    "main.1635d369.css.map": "/static/css/main.1635d369.css.map",
-    "main.92285dfa.js.map": "/static/js/main.92285dfa.js.map",
+    "main.c0e78681.css.map": "/static/css/main.c0e78681.css.map",
+    "main.917aae71.js.map": "/static/js/main.917aae71.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1635d369.css",
-    "static/js/main.92285dfa.js"
+    "static/css/main.c0e78681.css",
+    "static/js/main.917aae71.js"
   ]
 }
