@@ -4,11 +4,11 @@ import Vector from "../images/Vector.png";
 import menu from "../images/menu.png";
 import cross from "../images/cross.png";
 import Vector6 from "../images/Vector6.png";
-import Group1193 from "../images/Group1193.png";
+// import Group1193 from "../images/Group1193.png";
 import Vector5 from "../images/Vector5.png";
 import Group1201 from "../images/Group1201.png";
 import Group1199 from "../images/Group1199.png";
-import Group1093 from "../images/Group1093.png";
+// import Group1093 from "../images/Group1093.png";
 import Group1097 from "../images/Group1097.png";
 import Group1094 from "../images/Group1094.png";
 import Group1096 from "../images/Group1096.png";
@@ -81,7 +81,7 @@ function Tokenomics1() {
     </div> */}
         {dropdown && (
           <div className="absolute top-[10vh] right-[10vw]  z-[10000000]">
-            <Menu />
+            <Menu dropdown={dropdown} setdropdown={setdropdown} />
           </div>
         )}
         <div className="absolute top-[10vh] right-[15vw]  z-[1000]">
@@ -166,7 +166,7 @@ function Tokenomics1() {
         </div>
         {dropdown && (
           <div className="absolute top-[10vh] right-[5vw]">
-            <Menu />
+            <Menu dropdown={dropdown} setdropdown={setdropdown} />
           </div>
         )}
         <div className="pt-32 text-white font-poppins text-4xl text-center font-[600] tracking-wide">
@@ -181,16 +181,21 @@ function Tokenomics1() {
           />
         </div>
         <div className="w-[100vw] mt-72 z-[10000]">
-          <img src={Group1097} className="w-[70%] mx-auto  z-[1000]" />
+          <img
+            src={Group1097}
+            alt="Img"
+            className="w-[70%] mx-auto  z-[1000]"
+          />
         </div>
         <div>
           <img
             src={Group1094}
+            alt="Img"
             className="mt-[-200px] w-[100%] mx-auto  z-[1000]"
           />
         </div>
         <div className="w-[100vw]">
-          <img src={Group207} className="w-[86%] m-auto" />
+          <img src={Group207} alt="Img" className="w-[86%] m-auto" />
         </div>
         <br />
         <br />

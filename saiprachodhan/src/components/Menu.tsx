@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Menu() {
+function Menu({
+  dropdown,
+  setdropdown,
+}: {
+  dropdown: Boolean;
+  setdropdown: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const links = [
     { name: "Home", link: "/" },
     { name: "Tokenomics", link: "/tokenomics" },
@@ -34,6 +40,7 @@ function Menu() {
                   role="menuitem"
                   tabIndex={-1}
                   id="menu-item-0"
+                  onClick={() => setdropdown(false)}
                 >
                   {item.name}
                 </Link>
@@ -48,6 +55,7 @@ function Menu() {
                   role="menuitem"
                   tabIndex={-1}
                   id="menu-item-0"
+                  onClick={() => setdropdown(false)}
                 >
                   {item.name}
                 </a>

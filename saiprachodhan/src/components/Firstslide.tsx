@@ -102,7 +102,7 @@ function Firstslide() {
       </div>
       {dropdown && (
         <div className="absolute top-[10vh] right-[10vw]">
-          <Menu />
+          <Menu dropdown={dropdown} setdropdown={setdropdown} />
         </div>
       )}
       <div className="absolute top-[4vh] left-[10vw] text-white font-text font-bold text-2xl">
