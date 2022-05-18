@@ -38,14 +38,14 @@ function Firstslide() {
     walletconnect: {
       package: WalletConnectProvider, // required
       options: {
-        infuraId: "INFURA_ID", // required
+        infuraId: "05d3e1bd8cd74be5ab1c1c7d62cc86f0", // required
       },
     },
     coinbasewallet: {
       package: CoinbaseWalletSDK, // Required
       options: {
         appName: "web3modal", // Required
-        infuraId: "INFURA_ID", // Required
+        infuraId: "05d3e1bd8cd74be5ab1c1c7d62cc86f0", // Required
         rpc: "", // Optional if `infuraId` is provided; otherwise it's required
         chainId: 1, // Optional. It defaults to 1 if not provided
         darkMode: false, // Optional. Use dark theme, defaults to false
