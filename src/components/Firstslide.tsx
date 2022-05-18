@@ -31,8 +31,8 @@ function Firstslide() {
     bitski: {
       package: Bitski, // required
       options: {
-        clientId: "BITSKI_CLIENT_ID", // required
-        callbackUrl: "BITSKI_CALLBACK_URL", // required
+        clientId: "586419321608012265", // required
+        callbackUrl: "586419321608012265", // required
       },
     },
     walletconnect: {
