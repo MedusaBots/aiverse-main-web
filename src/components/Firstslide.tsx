@@ -8,7 +8,7 @@ import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
-import { Bitski } from "bitski";
+// import { Bitski } from "bitski";
 import Logo2 from "../images/logo2.png";
 import {
   faInstagram,
@@ -27,13 +27,6 @@ function Firstslide() {
   const providerOptions = {
     metmask: {
       package: true,
-    },
-    bitski: {
-      package: Bitski, // required
-      options: {
-        clientId: "586419321608012265", // required
-        callbackUrl: "586419321608012265", // required
-      },
     },
     walletconnect: {
       package: WalletConnectProvider, // required
@@ -67,9 +60,10 @@ function Firstslide() {
     const accounts = await web3.eth.getAccounts();
     const account = accounts[0];
     setWalletAddress(account);
+    console.log("first");
   };
   useEffect(() => {
-    if (walletAddress != "") {
+    if (walletAddress) {
       connectWallet();
     }
   }, []);
@@ -84,9 +78,12 @@ function Firstslide() {
         applications for <div></div>businesses, communities, and developers
         <br />
         <br />
-        <button className="bg-[#00C9E0] rounded-[8px] px-6 py-2   font-inter text-[16px] leading-[24px]">
+        <a
+          href="https://drive.google.com/file/d/12wUlejsHPuImzPBrUmNlmody70lU8AcL/view"
+          className="bg-[#00C9E0] rounded-[8px] px-6 py-2   font-inter text-[16px] leading-[24px]"
+        >
           Whitepaper
-        </button>
+        </a>
         <div className="py-1"></div>
         <button
           className="bg-[#00C9E0] rounded-[8px] px-6 py-2  font-inter text-[16px] leading-[24px] mx-4 md:hidden"

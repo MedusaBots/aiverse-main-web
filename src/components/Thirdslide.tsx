@@ -27,7 +27,7 @@ function Thirdslide() {
         </div>
         <div className="nw:ml-[8vw]">
           <h1 className="text-center md:text-left pt-[5vh] font-headingbold font-bold text-6xl text-white py-2">
-            Pillers Of aiverse
+            Pillars Of aiverse
           </h1>
           <br />
           <br />
