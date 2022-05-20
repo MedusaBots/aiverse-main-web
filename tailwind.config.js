@@ -10,6 +10,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         text: ["Manrope", "sans-serif"],
         inter: ["Inter"],
+        mont: ["Montserrat"],
       },
       screens: {
         sm: "480px",
@@ -19,6 +20,7 @@ module.exports = {
         roadmap: "1170px",
       },
     },
+    screens: { nw: { min: "900px" }, ...defaultTheme.screens },
   },
   plugins: [],
 };
