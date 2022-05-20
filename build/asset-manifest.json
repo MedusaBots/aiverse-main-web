@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cd1c524.css",
-    "main.js": "/static/js/main.6baed686.js",
+    "main.css": "/static/css/main.b9870a83.css",
+    "main.js": "/static/js/main.53798f53.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/Background1.png": "/static/media/Background1.7cd092d05d1bd2f2f2ca.png",
     "static/media/3.png": "/static/media/3.a8d15ae61f1ad594fd4e.png",
@@ -27,6 +27,7 @@
     "static/media/Maintokenlogo.webp": "/static/media/Maintokenlogo.9910889a9e9cd296a0dc.webp",
     "static/media/Notification.png": "/static/media/Notification.4e6c544653e199abe4e6.png",
     "static/media/Group1199.png": "/static/media/Group1199.2356803eeec002753539.png",
+    "static/media/loader.gif": "/static/media/loader.149a78232505d1b5589b.gif",
     "static/media/Mulish-Regular.ttf": "/static/media/Mulish-Regular.06ce9c37c31ae94797a2.ttf",
     "static/media/Mulish-Bold.ttf": "/static/media/Mulish-Bold.1f6c3935d7359190d7dd.ttf",
     "static/media/Centre.png": "/static/media/Centre.26cb65a75945be6d35b1.png",
@@ -41,12 +42,12 @@
     "static/media/polygon.svg": "/static/media/polygon.e3a43a17664201ac22135175a8554690.svg",
     "static/media/sketchfab.svg": "/static/media/sketchfab.c83ffa9fa1f4faa63c2c125d9c88170e.svg",
     "index.html": "/index.html",
-    "main.8cd1c524.css.map": "/static/css/main.8cd1c524.css.map",
-    "main.6baed686.js.map": "/static/js/main.6baed686.js.map",
+    "main.b9870a83.css.map": "/static/css/main.b9870a83.css.map",
+    "main.53798f53.js.map": "/static/js/main.53798f53.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cd1c524.css",
-    "static/js/main.6baed686.js"
+    "static/css/main.b9870a83.css",
+    "static/js/main.53798f53.js"
   ]
 }

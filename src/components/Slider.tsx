@@ -67,7 +67,7 @@ function Slider() {
   return (
     <div className="mb-32">
       <h1 className="text-center font-headingbold font-bold text-6xl text-white mb-4">
-        Early supporters
+        Backers and Partners
       </h1>
       <Swiper
         spaceBetween={30}

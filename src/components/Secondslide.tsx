@@ -115,8 +115,8 @@ function Secondslide() {
       </div>
       <div className="absolute w-[100vw] mt-[4vh] top-[100vh] bg-[#011627]">
         <div className="text-white w-[100vw] mt-[20vh] m-auto">
-          <div className="flex pt-10" id="scrollhere">
-            <div className="max-w-[50vw] ml-[15vw] text-sm text-lg font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
+          <div className="flex pt-16" id="scrollhere">
+            <div className="max-w-[50vw] ml-[15vw] text-[6px] md:text-lg font-text tracking-[-0.02em] leading-[150%] invisible md:visible">
               A Pocket-Friendly AI marketplace for Small scale Businesses and
               communities. aiverse is a platform for developers to use their
               skills to learn and earn by building AI models.
@@ -162,7 +162,6 @@ function Secondslide() {
         <br />
         <br />
         <br />
-        {/* <br /> */}
         {/* Achievements carousel */}
         <div className="flex m-auto mx-[10vw] justify-between">
           {achievements

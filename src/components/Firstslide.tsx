@@ -44,6 +44,9 @@ function Firstslide() {
         darkMode: false, // Optional. Use dark theme, defaults to false
       },
     },
+    binancechainwallet: {
+      package: true,
+    },
   };
 
   const web3Modal = new Web3Modal({
