@@ -67,10 +67,10 @@ function Secondslide() {
       ></div>
       <div className="absolute top-[98vh] block md:hidden max-w-[80vw] m-auto text-white z-[100000000] ml-[10vw]">
         <div className="text-3xl font-mulish font-[500] tracking-[0.05em] z-[1000000] pb-10">
-          Built on layer 2
+          Built on Web3
         </div>
         <p className="font-text font-[14px]">
-          A platform where even small communities con access ai technology and
+          A platform where even small communities can access ai technology and
           developers can use our platform to create their own data sets to
           experiment, learn and earn with their creativity.
         </p>
